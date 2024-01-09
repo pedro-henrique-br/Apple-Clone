@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: sans-serif;
   background: #ffff;
 }
@@ -13,9 +14,6 @@ body {
 /* Nav bar */
 
 .nav {
-  align-items: center;
-  justify-content: center;
-  display: flex;
   height: 7vh;
   background:  #252525;
 }
@@ -25,12 +23,14 @@ body {
   display: flex;
 }
 
-.nav-links ul {
+.nav-links ul { 
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
 .nav-links ul li{
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ffff;
   margin-right: 4.8em;
   list-style: none;
@@ -42,7 +42,10 @@ body {
 }
 
 #apple-logo {
-  padding-right: 5em;
+  margin-left: 20px;
+  display: flex;
+  margin-right: 80px;
+  justify-content: flex-start;
   height: 30px;
 }
 
@@ -227,5 +230,54 @@ body {
 
   to {
     opacity: 1;
+  }
+}
+
+/* Menu Hamburguer mobile */
+
+.menu-hamburguer {
+  display: none;
+}
+
+.menu-hamburguer ul {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-hamburguer ul li{
+  display: flex;
+  list-style: none;
+  border-radius: 16px;
+  background: #ffffff;
+  height: 4px;
+  width: 2.2rem;
+}
+
+.menu-hamburguer .line {
+  margin: 2px;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 600px) {
+  .nav {
+    width: 100vw;
+    height: 10vh;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+
+  #apple-logo  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-hamburguer {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
   }
 }
