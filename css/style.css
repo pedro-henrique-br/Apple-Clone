@@ -176,11 +176,46 @@ body {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border:solid 4px #8b8b8bfa;
-  background: #ffffff;
+  border:solid 5px #fffffffa;
+  /* outline: solid 2px #676767; */
 }
 
-#iphone-img .toggle{
-  transition: 5s;
-  height: 2px;
+#iphone_green {
+  background: rgb(0, 122, 8);
+}
+
+#iphone_golden {
+  background: rgb(193, 207, 0);
+}
+
+#iphone_grafite {
+  background: rgb(114, 114, 114);
+}
+
+#iphone_silver {
+  background: rgb(219, 219, 219);
+}
+
+#iphone_blue {
+  background: rgb(3, 124, 222);
+}
+
+.selected{
+  outline:solid 2px #007ad7;
+}
+
+.active {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
