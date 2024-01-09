@@ -148,6 +148,7 @@ body {
   color: #ffff;
 }
 
+
 /* botão de selecionar cor do iPhone */
 
 .buttons-iphone {
@@ -173,11 +174,18 @@ body {
 
 .buttons-iphone button {
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
-  border:solid 5px #fffffffa;
-  /* outline: solid 2px #676767; */
+  box-shadow: 2px 1px 6px;
+  border: solid 4px #ffff;
+  outline: solid 1px #676767;
+}
+
+.buttons-iphone button:hover {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  outline:solid 2px #007ad7;
 }
 
 #iphone_green {
@@ -200,9 +208,11 @@ body {
   background: rgb(3, 124, 222);
 }
 
-.selected{
+/* .selected{
+  animation-name: fadeIn;
+  animation-duration: 1s;
   outline:solid 2px #007ad7;
-}
+} */
 
 .active {
   animation-name: fadeIn;

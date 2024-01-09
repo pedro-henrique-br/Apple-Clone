@@ -12,14 +12,14 @@ const btn = [...buttons]
 // Funções 
 
 btn.forEach((btn) => {
-  btn.addEventListener("click", (e) =>{ /* Evento de click */
+  btn.addEventListener("click", (e) => { /* Evento de click */
     iphoneImg.src = `/assets/${e.target.id}.jpg`;
     iphoneImg.classList.add("active");
-    btn.classList.toggle("selected")
-
+    btn.classList.add("selected")
     setTimeout(() => { /* SetTimeout para desativar a classe do css */
-      iphoneImg.classList.toggle("active");
+    iphoneImg.classList.toggle("active");
+    btn.classList.remove("selected")
   }, 300)
-  })
-});
 
+  })
+  })
