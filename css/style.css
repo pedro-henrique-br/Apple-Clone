@@ -14,25 +14,27 @@ body {
 /* Nav bar */
 
 .nav {
-  height: 7vh;
+  width: 100vw;
+  height: 6em;
   background:  #252525;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav-links {
-  align-items: center;
-  display: flex;
+  margin: 20px;
 }
 
-.nav-links ul { 
-  justify-content: center;
-  align-items: center;
+.nav-links ul {
+  margin-right: 8rem;
   display: flex;
 }
 
 .nav-links ul li{
+  margin: 2rem;
   font-size: 1rem;
   color: #ffff;
-  margin-right: 4.8em;
   list-style: none;
 }
 
@@ -42,10 +44,7 @@ body {
 }
 
 #apple-logo {
-  margin-left: 20px;
-  display: flex;
-  margin-right: 80px;
-  justify-content: flex-start;
+  margin-left: 3rem;
   height: 30px;
 }
 
@@ -54,17 +53,17 @@ body {
 .header {
   height: 8vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background: #ffff;
   align-items: center;
 }
 
 .header h2 {
-  padding-right: 13vw;
+  margin-left: 8vw;
 }
 
 .header-links ul {
-  margin-right: 8vw;
+  margin-right: 19rem;
   list-style: none;
   display: flex;
   align-items: center;
@@ -155,21 +154,24 @@ body {
 /* botão de selecionar cor do iPhone */
 
 .buttons-iphone {
-  margin: 80px 0px 200px 0px;
+  margin: 80px 0px 150px 0px;
 }
 
 .buttons-iphone ul {
+  align-items: center;
+  justify-content: center;
   display: flex;
+  text-align: center;
 }
 
 .buttons-iphone ul li {
-  align-items: center;
+  text-align: center;
   margin-left: 80px;
   list-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-
 
 .buttons-iphone span {
   margin-top: 10px;
@@ -211,17 +213,12 @@ body {
   background: rgb(3, 124, 222);
 }
 
-/* .selected{
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  outline:solid 2px #007ad7;
-} */
-
 .active {
   animation-name: fadeIn;
   animation-duration: 0.5s;
 }
 
+/* Animação */
 
 @keyframes fadeIn {
   from {
@@ -233,51 +230,87 @@ body {
   }
 }
 
-/* Menu Hamburguer mobile */
 
-.menu-hamburguer {
-  display: none;
-}
-
-.menu-hamburguer ul {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-hamburguer ul li{
-  display: flex;
-  list-style: none;
-  border-radius: 16px;
-  background: #ffffff;
-  height: 4px;
-  width: 2.2rem;
-}
-
-.menu-hamburguer .line {
-  margin: 2px;
-}
 
 /* Responsivo */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1368px) {
   .nav {
     width: 100vw;
-    height: 10vh;
+    height: 6rem;
   }
   
-  .nav-links {
-    display: none;
+  .nav-links ul {
+    min-width: 800px;
+    margin-right: 3rem;
   }
 
-  #apple-logo  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .nav-links ul li {
+    margin: 1rem;
   }
-  .menu-hamburguer {
-    display: flex;
-    align-content: center;
-    justify-content: flex-end;
+
+  .header {
+    height: 4rem;
+  }
+
+  .header h2 {
+    min-width: 190px;
+    margin-left: 0em;
+  }
+
+  .header-links {
+  }  
+
+  .header-links ul {
+    min-width: 900px;
+  }
+ 
+  .header-links ul li a{
+    margin: 1rem;
+  }
+
+  .saiba-mais {
+    height: 3.5rem;
+  }
+
+  .container p {
+    max-width: 25rem;
+  }
+
+  #iphone-img {
+    height: 200px;
+  }
+
+  .buttons-iphone button {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .nav-links ul li {
+    margin-right: 1.2rem;
+  }
+
+  .header h2 {
+    max-width: 190px;
+    margin-right: 0rem;
+    margin-left: 2rem;
+  }
+
+  .header-links ul li{
+    max-width: 11rem;
+  }
+  .header-links ul li a{
+    margin: 0.2rem;
+  }
+
+  .header-links ul {
+    margin-right: 10px;
+  }
+
+  #iphone-img {
+    height: 150px;
   }
 }

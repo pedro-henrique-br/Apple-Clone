@@ -20,6 +20,5 @@ btn.forEach((btn) => {
     iphoneImg.classList.toggle("active");
     btn.classList.remove("selected")
   }, 300)
-
   })
   })
